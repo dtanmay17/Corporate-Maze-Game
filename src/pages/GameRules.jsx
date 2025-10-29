@@ -20,7 +20,7 @@ export default function GameRules() {
       title: "Turn Sequence",
       points: [
         "Roll the 3-sided die and move forward accordingly.",
-        "Land on a space (P/G/W/C/Blank).",
+        "Land on a space (P/G/W/C/ Blank ).",
         "Draw a card from the respective deck and follow the instructions.",
         "Update your scores based on card outcomes.",
         "If any score hits zero, skip the next turn ('recovery').",
@@ -70,7 +70,7 @@ export default function GameRules() {
       ],
       highlight: "YOU WIN!",
       footer:
-        "Winning reflects strategy and emotional balance — not luck or speed. Ongoing refinements aim for fairness and meaningful growth.",
+        "",
     },
     {
       icon: <FaSkull />,
