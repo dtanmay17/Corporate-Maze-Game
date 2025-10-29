@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Montserrat:wght@400;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Exo+2:wght@400&display=swap'); */
+
+
+body, html {
+  margin: 0;
+  height: 100%;
+  background: #0f172a;
+  /* overflow: hidden; */
+}
+
+.landing-headings{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.landing-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  overflow: hidden;
+}
+
+/* Animated grid background */
+.grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 8vh;
+  gap: 1px;
+  transform: rotate(5deg);
+  z-index: 0;
+}
+
+.tile {
+  background: rgba(0, 255, 204, 0.05);
+  border: 1px solid rgba(0, 255, 204, 0.1);
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.tile:nth-child(odd) {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* Text styling */
+.landing-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  color: #00ffd5;
+  text-shadow: 0 0 20px #00ffd5, 0 0 40px #00bfae;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.landing-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #d1d5db;
+  margin-top: 1rem;
+  z-index: 2;
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* Individual boxes */
+.score-box {
+  background: rgba(0, 255, 204, 0.08);
+  border: 2px solid #00ffd5;
+  border-radius: 1rem;
+  width: 250px;
+  min-height: 130px;
+  padding: 1rem;
+  color: #00ffd5;
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  box-shadow: 0 0 12px rgba(0, 255, 213, 0.2),
+              inset 0 0 8px rgba(0, 255, 213, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Headings */
+.score-box h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  color: #00ffd5;
+  margin-bottom: 0.4rem;
+}
+
+/* Text inside */
+.score-box p {
+  font-size: 0.7rem;
+  color: #b3fff4;
+  opacity: 0.9;
+}
+
+/* Hover animation: glow + scale */
+.score-box:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 25px #00ffd5, 0 0 50px rgba(0, 255, 213, 0.5);
+  background: rgba(0, 255, 204, 0.15);
+  border-color: #00ffee;
+}
+
+/* Subtle neon pulse animation */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(0, 255, 213, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 255, 213, 0.5);
+  }
+}
+
+.score-box {
+  animation: neonPulse 3s infinite ease-in-out;
+}

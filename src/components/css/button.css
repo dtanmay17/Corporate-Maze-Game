@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+.neon-btn {
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  background: rgba(0, 255, 204, 0.08);
+  color: #00ffd5;
+  border: 2px solid #00ffd5;
+  border-radius: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 213, 0.3), inset 0 0 10px rgba(0, 255, 213, 0.1);
+}
+
+.neon-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover effect - glow and lift */
+.neon-btn:hover {
+  color: #0f172a;
+  background: #00ffd5;
+  box-shadow: 0 0 25px #00ffd5, 0 0 50px #00ffd5, inset 0 0 15px #0f172a;
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* On-click pulse */
+.neon-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 10px #00bfae;
+}
+
+/* Ripple animation */
+.neon-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(0, 255, 204, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.6s ease;
+  z-index: 1;
+}
+
+.neon-btn:active::before {
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+}

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Exo+2:wght@400&display=swap');
+
+.game-page {
+  min-height: 100vh;
+  padding: 3rem;
+  color: #b3fff4;
+  background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+  font-family: 'Exo 2', sans-serif;
+}
+
+.game-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffd5;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+.game-subtitle {
+  text-align: center;
+  color: #a6fffa;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Sections */
+.game-section {
+  margin-bottom: 3rem;
+  background: rgba(0, 255, 204, 0.06);
+  border: 1px solid #00ffd5;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 255, 213, 0.4);
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #00ffee;
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Legend */
+.color-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.legend-item {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #0f172a;
+  cursor: default;
+}
+
+.legend-item.perf { background: #00ffd5; }
+.legend-item.grow { background: #00a2ff; }
+.legend-item.well { background: #66ffb2; }
+.legend-item.chal { background: #ff0077; color: #fff; }
+.legend-item.blank { background: #999; color: #fff; }
+
+/* Components grid */
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.component-card {
+  background: rgba(0, 255, 204, 0.08);
+  border: 1px solid #00ffd5;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.component-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffee;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.component-card p {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.component-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 25px #00ffd5;
+}
+
+/* Card types grid */
+.card-type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-type {
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #0f172a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card-type h3 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.card-type.perf { background: #00ffd5; }
+.card-type.grow { background: #00a2ff; color: #fff; }
+.card-type.well { background: #66ffb2; }
+.card-type.chal { background: #ff0077; color: #fff; }
+
+.card-type:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px currentColor;
+}
+
+/* COMPONENTS DIAGRAM */
+.components-diagram {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(0,255,213,0.06) 0%, rgba(0,255,255,0.02) 70%);
+  box-shadow: inset 0 0 30px rgba(0,255,255,0.1);
+}
+
+/* The central hub (Main Board) */
+.component-center {
+  position: relative;
+  z-index: 10;
+  background: #00ffd5;
+  color: #0f172a;
+  padding: 1.5rem;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 40px #00ffd5;
+  font-size: 1rem;
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 40px #00ffd5; transform: scale(1); }
+  50% { box-shadow: 0 0 60px #00fff2; transform: scale(1.05); }
+}
+
+/* Connected nodes */
+.component-node {
+  --radius: 220px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(var(--angle)) translate(var(--radius)) rotate(calc(var(--angle) * -1));
+  background: rgba(0,255,213,0.08);
+  border: 1px solid rgba(0,255,213,0.4);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  width: 180px;
+  min-height: 100px;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #bafff5;
+  backdrop-filter: blur(4px);
+}
+
+.component-node h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  color: #00ffee;
+  margin-bottom: 0.4rem;
+}
+
+.component-node p {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  opacity: 0.85;
+}
+
+/* Hover effect: line glow + scale */
+.component-node:hover {
+  background: rgba(0,255,213,0.15);
+  box-shadow: 0 0 25px #00ffd5;
+  transform: rotate(var(--angle)) translate(calc(var(--radius) + 8px)) rotate(calc(var(--angle) * -1)) scale(1.05);
+}
+
+/* Connecting lines */
+.component-node::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: var(--radius);
+  background: linear-gradient(to bottom, rgba(0,255,213,0.4), transparent);
+  transform-origin: top center;
+  transform: rotate(90deg) translateY(-50%);
+  opacity: 0.3;
+}
