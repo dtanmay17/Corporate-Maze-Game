@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/corporate-maze-game/static/css/main.6d9218cd.css",
-    "main.js": "/corporate-maze-game/static/js/main.3c1363cf.js",
-    "static/js/453.344b8b3d.chunk.js": "/corporate-maze-game/static/js/453.344b8b3d.chunk.js",
-    "index.html": "/corporate-maze-game/index.html",
-    "main.6d9218cd.css.map": "/corporate-maze-game/static/css/main.6d9218cd.css.map",
-    "main.3c1363cf.js.map": "/corporate-maze-game/static/js/main.3c1363cf.js.map",
-    "453.344b8b3d.chunk.js.map": "/corporate-maze-game/static/js/453.344b8b3d.chunk.js.map"
+    "main.css": "/Corporate-Maze-Game/static/css/main.6d9218cd.css",
+    "main.js": "/Corporate-Maze-Game/static/js/main.9c91995a.js",
+    "static/js/453.344b8b3d.chunk.js": "/Corporate-Maze-Game/static/js/453.344b8b3d.chunk.js",
+    "index.html": "/Corporate-Maze-Game/index.html",
+    "main.6d9218cd.css.map": "/Corporate-Maze-Game/static/css/main.6d9218cd.css.map",
+    "main.9c91995a.js.map": "/Corporate-Maze-Game/static/js/main.9c91995a.js.map",
+    "453.344b8b3d.chunk.js.map": "/Corporate-Maze-Game/static/js/453.344b8b3d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6d9218cd.css",
-    "static/js/main.3c1363cf.js"
+    "static/js/main.9c91995a.js"
   ]
 }
