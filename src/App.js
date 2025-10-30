@@ -1,9 +1,6 @@
 
-import { Route, Routes } from 'react-router';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 // import ReactDOM from 'react-dom';
-import {
-  BrowserRouter 
-} from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -21,7 +18,7 @@ function App() {
 const dispatch = useDispatch();
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen flex flex-col bg-slate-950 text-white">
         <Navbar />
         <main className="flex-grow p-8">
@@ -36,7 +33,7 @@ const dispatch = useDispatch();
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
